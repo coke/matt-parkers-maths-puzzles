@@ -9,7 +9,6 @@
 
 # --min - the smallest number used in the list
 # --max - the largest number 
-# -v / --verbose - show debug output - helpful when things get slow to see where we are 
 
 sub MAIN(:$min=1, :$max=9) {
     # Get all combinations of numbers in this range that sum to a prime.
