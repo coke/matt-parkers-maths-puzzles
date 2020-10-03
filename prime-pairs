@@ -38,6 +38,6 @@ sub MAIN(:$min=1, :$max=9) {
     # for each of the keys, see if there is a path to be found that
     # does not repeat any steps and uses all the keys.
     for %paths.keys.sort -> $key {
-        .say for check-path($max-$min+1, %paths, [$key,]);
+        .say for check-path($max-$min+1, %paths, $key);
     }
 }
