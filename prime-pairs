@@ -30,7 +30,7 @@ sub MAIN(:$min=1, :$max=9) {
         gather {
             for %paths{$last}.values -> $next {
                 next if @path.first($next); # no duplicates
-                for check-path($size, %paths, @path, $next) { .take }
+                .take for check-path($size, %paths, @path, $next);
             }
         }
     }
